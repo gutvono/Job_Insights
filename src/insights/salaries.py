@@ -23,6 +23,9 @@ def get_min_salary(path: str) -> int:
 
 
 def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
+    # O try está tratando os seguintes casos:
+    # - Chaves min_salary ou max_salary não existem
+    # - Valores não numéricos tanto nas chaves de job quanto em salary
 
     try:
         min_salary = int(job['min_salary'])
@@ -42,18 +45,12 @@ def filter_by_salary_range(
     jobs: List[dict],
     salary: Union[str, int]
 ) -> List[Dict]:
-    """Filters a list of jobs by salary range
+    jobs_list = []
+    for job in jobs:
+        try:
+            if matches_salary_range(job, salary):
+                jobs_list.append(job)
+        except(ValueError):
+            print("This job isn't in the range")
 
-    Parameters
-    ----------
-    jobs : list
-        The jobs to be filtered
-    salary : int
-        The salary to be used as filter
-
-    Returns
-    -------
-    list
-        Jobs whose salary range contains `salary`
-    """
-    raise NotImplementedError
+    return jobs_list

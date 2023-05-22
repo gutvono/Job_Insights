@@ -2,6 +2,7 @@ from typing import Union, List, Dict
 from src.insights.jobs import read
 
 
+# Busca o maior salário.
 def get_max_salary(path: str) -> int:
     jobs_list = read(path)
     salaries = []
@@ -12,6 +13,7 @@ def get_max_salary(path: str) -> int:
     return max(salaries)
 
 
+# Busca o menor salário.
 def get_min_salary(path: str) -> int:
     jobs_list = read(path)
     salaries = []
@@ -22,6 +24,8 @@ def get_min_salary(path: str) -> int:
     return min(salaries)
 
 
+# Identifica se o salário desejado está dentro dos
+# valores máximo e mínimo se salário.
 def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
     # O try está tratando os seguintes casos:
     # - Chaves min_salary ou max_salary não existem
@@ -32,7 +36,7 @@ def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
         max_salary = int(job['max_salary'])
         salary_input = int(salary)
 
-    except(ValueError, TypeError, KeyError):
+    except (ValueError, TypeError, KeyError):
         raise ValueError
 
     if min_salary > max_salary:
@@ -41,6 +45,8 @@ def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
     return min_salary <= salary_input <= max_salary
 
 
+# Retorna lista de trabalhos no qual a pretenção salarial
+# está dentro do mínimo e máximo.
 def filter_by_salary_range(
     jobs: List[dict],
     salary: Union[str, int]
@@ -50,7 +56,7 @@ def filter_by_salary_range(
         try:
             if matches_salary_range(job, salary):
                 jobs_list.append(job)
-        except(ValueError):
+        except (ValueError):
             print("This job isn't in the range")
 
     return jobs_list

@@ -2,6 +2,7 @@ from typing import List, Dict
 from src.insights.jobs import read
 
 
+# Identifica quais empresas estão representadas nesse conjunto de dados.
 def get_unique_industries(path: str) -> List[str]:
     jobs_list = read(path)
     industries = set()
@@ -11,6 +12,7 @@ def get_unique_industries(path: str) -> List[str]:
     return industries
 
 
+# Filtra as vagas pela empresa.
 def filter_by_industry(jobs: List[Dict], industry: str) -> List[Dict]:
     jobs_list = []
     for job in jobs:

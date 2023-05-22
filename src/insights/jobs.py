@@ -4,6 +4,7 @@ import csv
 
 
 @lru_cache
+# Abre o arquivo CSV e retorna os dados no formato de uma lista de dicionários.
 def read(path: str) -> List[Dict]:
     with open(path, mode="r") as file:
         data = csv.DictReader(file)
@@ -13,6 +14,7 @@ def read(path: str) -> List[Dict]:
         return jobs_list
 
 
+# Identifica quais tipos de empregos existem.
 def get_unique_job_types(path: str) -> List[str]:
     jobs_list = read(path)
     job_types = set()
@@ -21,6 +23,7 @@ def get_unique_job_types(path: str) -> List[str]:
     return job_types
 
 
+# Filtra os empregos pelo tipo.
 def filter_by_job_type(jobs: List[Dict], job_type: str) -> List[Dict]:
     jobs_list = []
     for job in jobs:

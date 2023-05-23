@@ -15,7 +15,7 @@
     <summary>🧰 <strong>Ferramentas</strong>, <strong>linguagens</strong> e respectivas <strong>funções</strong> utilizadas:</summary>
     <li> <i>Python</i> (linguagem);</li>
     <li> <i>CSV file</i> (data);</li>
-    <li> <i>Docker & venv</i> (ambiente);</li>
+    <li> <i>venv</i> (ambiente virtual);</li>
     <li> <i>pytest</i> (testes unitários);</li>
 </details>
 

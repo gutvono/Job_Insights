@@ -2,7 +2,7 @@
 
 🌱 A ideia principal do projeto é aprender a **manipular** dados, e retorná-los como necessário. Simulando o back-end de uma aplicação, foi utilizado a linguagem _Python_ para a realização do mini-projeto. Sobre sua funcionalidade, foram feitas _funções_ que preparam os dados para a **manipulação**, que são basicamente empregos/vagas de trabalho dentro de um arquivo _.csv_, e logo em seguida funções que manipulam esses dados filtrando de acordo com o que era recebido na sua entrada (parametros).
 
-<img alt="work" src="https://media.tenor.com/03cTfxfJeTwAAAAC/quality-quality-work.gif" width="100px">
+<img alt="work" src="https://media.tenor.com/03cTfxfJeTwAAAAC/quality-quality-work.gif" width="200px">
 
 # Contexto geral:
 

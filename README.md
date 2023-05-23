@@ -53,7 +53,7 @@ Como sempre, um projeto nunca termina de fato. Sempre haverão **melhorias** par
     <li>Melhorias estruturais seguindo alguns design de software como SOLID, POO, DDD, etc;</li>
     <li>Implementar testes unitários e as novas funções para as buscas de trabalhos no brasil, que já se encontram na aplicação;</li>
     <li>Expandir alguns trechos de codigos para uma melhor manutenção e entendimento.</li>
-
+<br>
     Essas são apenas algumas ideias de melhorias e adição de novas features!
 </details>
 
